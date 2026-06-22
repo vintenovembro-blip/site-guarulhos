@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { GraduationCap, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const navLinks = [
   { label: "Início",        href: "#inicio" },
@@ -28,14 +29,14 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="footer-brand">
-            <div style={{ display: "flex", alignItems: "center", gap: ".625rem", marginBottom: "1rem" }}>
-              <div style={{ padding: ".5rem", background: "linear-gradient(135deg,#2563eb,#3b82f6)", borderRadius: ".75rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, boxShadow: "0 4px 14px rgba(37,99,235,.25)" }}>
-                <GraduationCap style={{ width: "1.5rem", height: "1.5rem", color: "#fff" }} />
-              </div>
-              <div>
-                <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 900, fontSize: "1.1rem", color: "#2563eb" }}>Sua Chance</div>
-                <div style={{ color: "#3b82f6", fontSize: ".7rem" }}>Cursinho Preparatório</div>
-              </div>
+            <div style={{ marginBottom: "1rem" }}>
+              <Image
+                src="/images/logos/Logo normal.png"
+                alt="Sua Chance — Cursinho Preparatório"
+                width={160}
+                height={50}
+                style={{ height: "2.75rem", width: "auto", objectFit: "contain" }}
+              />
             </div>
             <p style={{ color: "#64748b", fontSize: ".82rem", lineHeight: 1.7, marginBottom: ".75rem", maxWidth: "280px" }}>
               Programa educacional gratuito para jovens de 15 a 25 anos das periferias de Guarulhos — preparação para o Vestibulinho ETEC e ENEM.

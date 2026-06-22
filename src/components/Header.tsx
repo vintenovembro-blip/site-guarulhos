@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const NAV = [
   { label: "Início",        href: "#inicio" },
@@ -54,14 +55,15 @@ export default function Header() {
         <div className="container-inner" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "4rem" }}>
 
           <button onClick={() => go("#inicio")} aria-label="Ir para o início"
-            style={{ display: "flex", alignItems: "center", gap: ".5rem", background: "none", border: "none", cursor: "pointer", minHeight: "44px", padding: "0 .25rem" }}>
-            <div style={{ padding: ".4rem", background: "linear-gradient(135deg,#2563eb,#3b82f6)", borderRadius: ".625rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <GraduationCap style={{ width: "1.25rem", height: "1.25rem", color: "#fff" }} />
-            </div>
-            <div style={{ textAlign: "left" }}>
-              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 900, fontSize: "1rem", lineHeight: 1.1, color: scrolled ? "#2563eb" : "#fff", transition: "color .3s" }}>Sua Chance</div>
-              <div style={{ fontSize: ".65rem", lineHeight: 1, color: scrolled ? "#2563eb" : "#bfdbfe", transition: "color .3s" }}>Cursinho Preparatório</div>
-            </div>
+            style={{ display: "flex", alignItems: "center", background: "none", border: "none", cursor: "pointer", minHeight: "44px", padding: "0 .25rem" }}>
+            <Image
+              src={scrolled ? "/images/logos/Logo normal.png" : "/images/logos/Logo branco.png"}
+              alt="Sua Chance — Cursinho Preparatório"
+              width={140}
+              height={44}
+              style={{ height: "2.5rem", width: "auto", objectFit: "contain", transition: "opacity .3s" }}
+              priority
+            />
           </button>
 
           <nav aria-label="Navegação principal" className="desktop-nav">
