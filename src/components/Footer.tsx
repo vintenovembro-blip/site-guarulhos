@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Sobre",         href: "#sobre" },
   { label: "Matérias",      href: "#materias" },
   { label: "Como Funciona", href: "#como-funciona" },
+  { label: "FAQ",           href: "#faq" },
 ];
 
 const socialLinks = [
@@ -36,9 +37,14 @@ export default function Footer() {
                 <div style={{ color: "#3b82f6", fontSize: ".7rem" }}>Cursinho Preparatório</div>
               </div>
             </div>
-            <p style={{ color: "#64748b", fontSize: ".82rem", lineHeight: 1.7, marginBottom: "1.25rem", maxWidth: "280px" }}>
-              Cursinho preparatório gratuito para o Vestibulinho da ETEC e para o ENEM. Nossa missão é garantir que todo jovem tenha acesso a uma educação de qualidade.
+            <p style={{ color: "#64748b", fontSize: ".82rem", lineHeight: 1.7, marginBottom: ".75rem", maxWidth: "280px" }}>
+              Programa educacional gratuito para jovens de 15 a 25 anos das periferias de Guarulhos — preparação para o Vestibulinho ETEC e ENEM.
             </p>
+            <div style={{ marginBottom: "1rem", display: "flex", flexDirection: "column", gap: ".25rem" }}>
+              <span style={{ fontSize: ".72rem", color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".04em" }}>Realização</span>
+              <span style={{ fontSize: ".78rem", color: "#2563eb", fontWeight: 700 }}>Instituto 20 de Novembro</span>
+              <span style={{ fontSize: ".78rem", color: "#3b82f6", fontWeight: 600 }}>Secretaria de Juventude · Prefeitura de Guarulhos</span>
+            </div>
             <div style={{ display: "flex", gap: ".625rem" }}>
               {socialLinks.map((s) => (
                 <motion.a key={s.label} href="#" whileHover={{ scale: 1.1, y: -2 }} aria-label={s.label}
@@ -66,13 +72,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Preparatórios + CTA */}
+          {/* CEUs + CTA */}
           <div>
-            <h4 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: ".85rem", marginBottom: "1rem", color: "#2563eb" }}>Preparatórios</h4>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: ".625rem", marginBottom: "1.25rem" }}>
-              {["Vestibulinho ETEC", "ENEM"].map((label) => (
+            <h4 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: ".85rem", marginBottom: "1rem", color: "#2563eb" }}>Unidades CEU</h4>
+            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: ".5rem", marginBottom: "1.25rem" }}>
+              {["CEU Pimentas", "CEU Bonsucesso", "CEU Cabuçu", "Online (Híbrido)"].map((label) => (
                 <li key={label}>
-                  <button onClick={() => scrollTo("#materias")}
+                  <button onClick={() => scrollTo("#inscricao")}
                     style={{ background: "none", border: "none", cursor: "pointer", color: "#64748b", fontSize: ".82rem", padding: 0, minHeight: "36px", fontFamily: "inherit", transition: "color .2s" }}
                     onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#2563eb"; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "#64748b"; }}>
@@ -94,7 +100,7 @@ export default function Footer() {
         <div className="container-inner" style={{ paddingTop: "1.25rem", paddingBottom: "1.25rem" }}>
           <div className="footer-bottom-row">
             <p style={{ color: "#94a3b8", fontSize: ".72rem", textAlign: "center" }}>
-              © {new Date().getFullYear()} Cursinho Preparatório Sua Chance. Todos os direitos reservados.
+              © {new Date().getFullYear()} Instituto 20 de Novembro · Programa Sua Chance Social · Guarulhos/SP
             </p>
             <p style={{ color: "#94a3b8", fontSize: ".72rem", display: "flex", alignItems: "center", gap: ".25rem" }}>
               Feito com <Heart style={{ width: ".75rem", height: ".75rem", color: "#f87171", fill: "#f87171" }} aria-hidden /> para quem quer crescer

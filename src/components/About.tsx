@@ -2,22 +2,22 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { Target, Lightbulb, Shield, Zap, CheckCircle2 } from "lucide-react";
+import { MapPin, BookOpenCheck, Wifi, Users2, CheckCircle2 } from "lucide-react";
 
 const diferenciais = [
-  { icon: Target,    title: "Foco Total no Resultado",  description: "Metodologia 100% direcionada para o Vestibulinho da ETEC e o ENEM, cobrindo tudo que vai cair.", iconBg: "#dbeafe", iconColor: "#2563eb", border: "#bfdbfe", bg: "#eff6ff" },
-  { icon: Lightbulb, title: "Professores Apaixonados",  description: "Professores que ensinam de verdade, com didática clara, exemplos práticos e muita energia.",        iconBg: "#fef9c3", iconColor: "#ca8a04", border: "#fde68a", bg: "#fefce8" },
-  { icon: Shield,    title: "Completamente Gratuito",   description: "Educação de qualidade é um direito. Por isso o cursinho é 100% gratuito, sem taxas ocultas.",       iconBg: "#dcfce7", iconColor: "#16a34a", border: "#bbf7d0", bg: "#f0fdf4" },
-  { icon: Zap,       title: "Comunidade de Apoio",      description: "Faça parte de uma turma unida que cresce e conquista aprovações juntos.",                            iconBg: "#ede9fe", iconColor: "#7c3aed", border: "#ddd6fe", bg: "#f5f3ff" },
+  { icon: MapPin,        title: "3 Unidades CEU",             description: "Aulas presenciais nas quintas, sextas e sábados nos CEUs dos Pimentas, Bonsucesso e Cabuçu — próximo de você.", iconBg: "#dbeafe", iconColor: "#2563eb", border: "#bfdbfe", bg: "#eff6ff" },
+  { icon: Wifi,          title: "Formato Híbrido",            description: "Não pode vir presencialmente? Sem problema. Vagas ilimitadas no formato híbrido — acompanhe tudo online pela plataforma digital.",     iconBg: "#fef9c3", iconColor: "#ca8a04", border: "#fde68a", bg: "#fefce8" },
+  { icon: BookOpenCheck, title: "Metodologia CPOP/MEC",       description: "Conteúdo 100% alinhado às diretrizes dos cursinhos populares CPOP vinculados ao Ministério da Educação (Edital 04/2026).",     iconBg: "#dcfce7", iconColor: "#16a34a", border: "#bbf7d0", bg: "#f0fdf4" },
+  { icon: Users2,        title: "Jovens de 15 a 25 anos",     description: "Voltado para jovens moradores das periferias de Guarulhos que não têm como custear cursinhos particulares.",                     iconBg: "#ede9fe", iconColor: "#7c3aed", border: "#ddd6fe", bg: "#f5f3ff" },
 ];
 
 const checkItems = [
-  "Material didático incluso",
-  "Simulados e exercícios extras",
-  "Grupo exclusivo de alunos",
-  "Plantão de dúvidas",
-  "Revisões intensivas antes da prova",
-  "Acompanhamento personalizado",
+  "Aulas presenciais e acesso online",
+  "Material didático incluso — sem custo",
+  "Simulados no formato Vestibulinho e ENEM",
+  "Professores alinhados à metodologia CPOP",
+  "3 unidades CEU em Guarulhos",
+  "Formato híbrido com vagas ilimitadas",
 ];
 
 export default function About() {
@@ -32,16 +32,17 @@ export default function About() {
         <div className="section-header">
           <motion.div initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45 }}
             style={{ display: "inline-flex", alignItems: "center", background: "#dbeafe", color: "#2563eb", padding: ".4rem 1rem", borderRadius: "999px", fontSize: ".8rem", fontWeight: 700, marginBottom: "1rem" }}>
-            Sobre o Cursinho
+            Sobre o Programa
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .5, delay: .08 }}
             style={{ fontSize: "clamp(1.75rem, 5vw, 3rem)", fontWeight: 900, color: "#2563eb", fontFamily: "Poppins, sans-serif", lineHeight: 1.15, marginBottom: ".875rem" }}>
-            Por que escolher o{" "}
-            <span style={{ color: "#2563eb" }}>Sua Chance?</span>
+            Instituto 20 de Novembro +{" "}
+            <span style={{ color: "#3b82f6" }}>Prefeitura de Guarulhos</span>
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: reduce ? 0 : 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .5, delay: .15 }}
-            style={{ color: "#475569", fontSize: "clamp(.95rem, 2.5vw, 1.1rem)", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
-            Somos um cursinho preparatório criado com um único objetivo: te dar todas as ferramentas para você conquistar sua vaga na ETEC e no ENEM.
+            style={{ color: "#475569", fontSize: "clamp(.95rem, 2.5vw, 1.1rem)", maxWidth: "660px", margin: "0 auto", lineHeight: 1.7 }}>
+            O programa Sua Chance democratiza o acesso ao ensino técnico e superior para jovens das periferias de Guarulhos,
+            combatendo as barreiras históricas que impedem populações vulneráveis de ingressar em escolas técnicas e universidades públicas.
           </motion.p>
         </div>
 
@@ -70,7 +71,7 @@ export default function About() {
               <div aria-hidden style={{ position: "absolute", bottom: "-2.5rem", left: "-2.5rem", width: "12rem", height: "12rem", borderRadius: "50%", background: "rgba(255,255,255,.05)" }} />
               <div style={{ position: "relative", zIndex: 1 }}>
                 <h3 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 900, fontSize: "1.3rem", marginBottom: ".25rem" }}>O que está incluso</h3>
-                <p style={{ color: "#bfdbfe", fontSize: ".85rem", marginBottom: "1.25rem" }}>Tudo o que você precisa para passar, sem custar nada.</p>
+                <p style={{ color: "#bfdbfe", fontSize: ".85rem", marginBottom: "1.25rem" }}>Tudo o que você precisa para passar — sem custar nada.</p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: ".75rem" }}>
                   {checkItems.map((item, i) => (
                     <motion.li key={item} initial={{ opacity: 0, x: reduce ? 0 : -14 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: .4 + i * .07 }}

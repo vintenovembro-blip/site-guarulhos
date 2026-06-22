@@ -5,9 +5,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles, ArrowRight, Play, Zap } from "lucide-react";
 
 const STATS = [
-  { value: "200+", label: "Alunos" },
-  { value: "85%",  label: "Aprovação" },
-  { value: "100%", label: "Gratuito" },
+  { value: "600",  label: "Vagas Presenciais" },
+  { value: "3",    label: "Unidades CEU" },
+  { value: "∞",   label: "Vagas Online" },
 ];
 
 interface Particle {
@@ -109,11 +109,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: reduce ? 0 : 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .55, delay: .2 }}
-            style={{ color: "rgba(255,255,255,.9)", fontSize: "clamp(1rem, 3vw, 1.2rem)", lineHeight: 1.7, maxWidth: "580px", marginBottom: "2.5rem" }}
+            style={{ color: "rgba(255,255,255,.9)", fontSize: "clamp(1rem, 3vw, 1.2rem)", lineHeight: 1.7, maxWidth: "600px", marginBottom: "2.5rem" }}
           >
-            O Cursinho Sua Chance prepara você com metodologia focada, professores
-            apaixonados e material completo —{" "}
-            <strong style={{ color: "#fff", fontWeight: 700 }}>totalmente gratuito.</strong>
+            Uma iniciativa do <strong style={{ color: "#fff" }}>Instituto 20 de Novembro</strong> com a{" "}
+            <strong style={{ color: "#fff" }}>Secretaria de Juventude de Guarulhos</strong> — para jovens de 15 a 25 anos das periferias.{" "}
+            <strong style={{ color: "#fff", fontWeight: 700 }}>Totalmente gratuito.</strong>
           </motion.p>
 
           {/* CTAs */}

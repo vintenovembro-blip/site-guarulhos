@@ -2,12 +2,29 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { ClipboardList, BookOpenCheck, GraduationCap, ArrowRight, ArrowDown } from "lucide-react";
+import { ClipboardList, MapPin, Monitor, GraduationCap, ArrowRight, ArrowDown } from "lucide-react";
 
 const steps = [
-  { number: "01", icon: ClipboardList, title: "Faça sua Inscrição",      description: "Preencha o formulário em menos de 2 minutos. Sem burocracia, sem documentos, sem custo.",                               iconBg: "#2563eb", cardBg: "#eff6ff", cardBorder: "#bfdbfe" },
-  { number: "02", icon: BookOpenCheck, title: "Assista às Aulas",         description: "Participe das aulas com professores dedicados, receba material de estudo e pratique com simulados exclusivos.",         iconBg: "#7c3aed", cardBg: "#f5f3ff", cardBorder: "#ddd6fe" },
-  { number: "03", icon: GraduationCap, title: "Conquiste sua Aprovação",  description: "Com preparação completa e comunidade de apoio, você chega na prova confiante e conquista sua vaga.",                   iconBg: "#16a34a", cardBg: "#f0fdf4", cardBorder: "#bbf7d0" },
+  {
+    number: "01", icon: ClipboardList, title: "Faça sua Inscrição",
+    description: "Preencha o formulário abaixo em menos de 2 minutos. Informe se prefere o formato presencial (CEU) ou online. Sem custo, sem burocracia.",
+    iconBg: "#2563eb", cardBg: "#eff6ff", cardBorder: "#bfdbfe",
+  },
+  {
+    number: "02", icon: MapPin, title: "Escolha sua Unidade CEU",
+    description: "Se optar pelo presencial, escolha entre CEU Pimentas, CEU Bonsucesso ou CEU Cabuçu — as unidades mais próximas das periferias de Guarulhos.",
+    iconBg: "#7c3aed", cardBg: "#f5f3ff", cardBorder: "#ddd6fe",
+  },
+  {
+    number: "03", icon: Monitor, title: "Participe das Aulas",
+    description: "Aulas presenciais às quintas, sextas e sábados. Quem opta pelo híbrido acompanha tudo integralmente pela plataforma digital — vagas ilimitadas.",
+    iconBg: "#0891b2", cardBg: "#ecfeff", cardBorder: "#a5f3fc",
+  },
+  {
+    number: "04", icon: GraduationCap, title: "Conquiste sua Aprovação",
+    description: "Com metodologia CPOP/MEC, simulados e professores dedicados, você chega preparado para o Vestibulinho da ETEC e para o ENEM.",
+    iconBg: "#16a34a", cardBg: "#f0fdf4", cardBorder: "#bbf7d0",
+  },
 ];
 
 export default function HowItWorks() {
@@ -26,12 +43,12 @@ export default function HowItWorks() {
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .08 }}
             style={{ fontFamily: "Poppins, sans-serif", fontWeight: 900, fontSize: "clamp(1.75rem, 5vw, 3rem)", color: "#2563eb", lineHeight: 1.15, marginBottom: ".875rem" }}>
-            3 passos para a sua{" "}
-            <span style={{ color: "#2563eb" }}>aprovação</span>
+            4 passos para a sua{" "}
+            <span style={{ color: "#3b82f6" }}>aprovação</span>
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: reduce ? 0 : 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .15 }}
-            style={{ color: "#475569", fontSize: "clamp(.9rem, 2.5vw, 1.05rem)", maxWidth: "520px", margin: "0 auto", lineHeight: 1.65 }}>
-            Simples assim. Você foca nos estudos, a gente cuida do resto.
+            style={{ color: "#475569", fontSize: "clamp(.9rem, 2.5vw, 1.05rem)", maxWidth: "560px", margin: "0 auto", lineHeight: 1.65 }}>
+            Presencial nos CEUs ou online pelo híbrido — você escolhe o formato que funciona para a sua vida.
           </motion.p>
         </div>
 
@@ -60,10 +77,10 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <motion.div initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .7 }} style={{ textAlign: "center", marginTop: "2.5rem" }}>
+        <motion.div initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .8 }} style={{ textAlign: "center", marginTop: "2.5rem" }}>
           <button onClick={() => document.querySelector("#inscricao")?.scrollIntoView({ behavior: "smooth" })}
             style={{ display: "inline-flex", alignItems: "center", gap: ".75rem", padding: "1rem 1.75rem", background: "linear-gradient(135deg,#2563eb,#3b82f6)", color: "#fff", borderRadius: "1rem", fontWeight: 800, fontSize: "1rem", border: "none", cursor: "pointer", minHeight: "56px", fontFamily: "inherit", boxShadow: "0 8px 24px rgba(37,99,235,.3)" }}>
-            Começar Agora — É Grátis!
+            Quero Minha Vaga Grátis!
             <ArrowRight style={{ width: "1.15rem", height: "1.15rem", flexShrink: 0 }} />
           </button>
         </motion.div>
