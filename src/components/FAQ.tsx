@@ -7,7 +7,7 @@ import { ChevronDown, MessageCircleQuestion } from "lucide-react";
 const faqs = [
   {
     question: "O programa Sua Chance é realmente gratuito?",
-    answer: "Sim, 100% gratuito. O programa é uma iniciativa do Instituto 20 de Novembro em parceria com a Secretaria de Juventude da Prefeitura Municipal de Guarulhos. Não há mensalidades, taxas de matrícula, cobranças por material ou qualquer outro custo para o aluno.",
+    answer: "Sim, 100% gratuito. O programa é uma iniciativa do Cursinho 20 de Novembro em parceria com a Secretaria de Juventude da Prefeitura Municipal de Guarulhos. Não há mensalidades, taxas de matrícula, cobranças por material ou qualquer outro custo para o aluno.",
   },
   {
     question: "Quem pode se inscrever?",
@@ -103,7 +103,7 @@ export default function FAQ() {
         <motion.div initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .6 }}
           style={{ maxWidth: "780px", margin: "1.5rem auto 0", padding: "1.25rem", borderRadius: "1rem", border: "1px solid #bfdbfe", background: "#eff6ff", textAlign: "center" }}>
           <p style={{ color: "#2563eb", fontWeight: 600, fontSize: ".9rem", marginBottom: ".25rem" }}>Ainda tem dúvida?</p>
-          <p style={{ color: "#64748b", fontSize: ".8rem", marginBottom: "1rem" }}>Fale com a equipe do Instituto 20 de Novembro pelo WhatsApp.</p>
+          <p style={{ color: "#64748b", fontSize: ".8rem", marginBottom: "1rem" }}>Fale com a equipe do Cursinho 20 de Novembro pelo WhatsApp.</p>
           <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20programa%20Sua%20Chance." target="_blank" rel="noopener noreferrer"
             style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", padding: ".875rem 1.5rem", background: "#16a34a", color: "#fff", borderRadius: ".875rem", fontWeight: 800, fontSize: ".9rem", textDecoration: "none", minHeight: "52px", boxShadow: "0 4px 16px rgba(22,163,74,.3)" }}>
             <svg style={{ width: "1.15rem", height: "1.15rem", flexShrink: 0 }} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

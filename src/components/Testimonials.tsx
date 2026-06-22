@@ -7,7 +7,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Ana Beatriz S.", role: "Aprovada na ETEC — Técnico em Informática · Guarulhos",
-    text: "Moro nos Pimentas e não tinha como pagar cursinho. O Sua Chance chegou no CEU do meu bairro e me preparou de verdade. Passei no Vestibulinho na primeira tentativa. Obrigada, Instituto 20 de Novembro!",
+    text: "Moro nos Pimentas e não tinha como pagar cursinho. O Sua Chance chegou no CEU do meu bairro e me preparou de verdade. Passei no Vestibulinho na primeira tentativa. Obrigada, Cursinho 20 de Novembro!",
     stars: 5, avatar: "AB", color: "#2563eb",
   },
   {

@@ -36,7 +36,7 @@ export default function About() {
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .5, delay: .08 }}
             style={{ fontSize: "clamp(1.75rem, 5vw, 3rem)", fontWeight: 900, color: "#2563eb", fontFamily: "Poppins, sans-serif", lineHeight: 1.15, marginBottom: ".875rem" }}>
-            Instituto 20 de Novembro +{" "}
+            Cursinho 20 de Novembro +{" "}
             <span style={{ color: "#3b82f6" }}>Prefeitura de Guarulhos</span>
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: reduce ? 0 : 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .5, delay: .15 }}

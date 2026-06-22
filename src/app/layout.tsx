@@ -77,6 +77,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://suachance.com.br",
   },
+  icons: {
+    icon: "/images/logos/Design sem nome (20).png",
+    shortcut: "/images/logos/Design sem nome (20).png",
+    apple: "/images/logos/Design sem nome (20).png",
+  },
 };
 
 const jsonLd = {

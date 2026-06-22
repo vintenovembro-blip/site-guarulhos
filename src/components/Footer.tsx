@@ -43,7 +43,7 @@ export default function Footer() {
             </p>
             <div style={{ marginBottom: "1rem", display: "flex", flexDirection: "column", gap: ".25rem" }}>
               <span style={{ fontSize: ".72rem", color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".04em" }}>Realização</span>
-              <span style={{ fontSize: ".78rem", color: "#2563eb", fontWeight: 700 }}>Instituto 20 de Novembro</span>
+              <span style={{ fontSize: ".78rem", color: "#2563eb", fontWeight: 700 }}>Cursinho 20 de Novembro</span>
               <span style={{ fontSize: ".78rem", color: "#3b82f6", fontWeight: 600 }}>Secretaria de Juventude · Prefeitura de Guarulhos</span>
             </div>
             <div style={{ display: "flex", gap: ".625rem" }}>
@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="container-inner" style={{ paddingTop: "1.25rem", paddingBottom: "1.25rem" }}>
           <div className="footer-bottom-row">
             <p style={{ color: "#94a3b8", fontSize: ".72rem", textAlign: "center" }}>
-              © {new Date().getFullYear()} Instituto 20 de Novembro · Programa Sua Chance Social · Guarulhos/SP
+              © {new Date().getFullYear()} Cursinho 20 de Novembro · Programa Sua Chance Social · Guarulhos/SP
             </p>
             <p style={{ color: "#94a3b8", fontSize: ".72rem", display: "flex", alignItems: "center", gap: ".25rem" }}>
               Feito com <Heart style={{ width: ".75rem", height: ".75rem", color: "#f87171", fill: "#f87171" }} aria-hidden /> para quem quer crescer

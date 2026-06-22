@@ -102,7 +102,7 @@ export default function InscricaoForm() {
             </h2>
 
             <p style={{ color: "rgba(255,255,255,.88)", fontSize: "clamp(.9rem, 2.5vw, 1.05rem)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-              Uma iniciativa do <strong style={{ color: "#fff" }}>Instituto 20 de Novembro</strong> com a Secretaria de Juventude de Guarulhos. Vagas presenciais nos CEUs Pimentas, Bonsucesso e Cabuçu — ou acompanhe online pelo formato híbrido.{" "}
+              Uma iniciativa do <strong style={{ color: "#fff" }}>Cursinho 20 de Novembro</strong> com a Secretaria de Juventude de Guarulhos. Vagas presenciais nos CEUs Pimentas, Bonsucesso e Cabuçu — ou acompanhe online pelo formato híbrido.{" "}
               <strong style={{ color: "#f0f6ff" }}>Totalmente gratuito.</strong>
             </p>
 

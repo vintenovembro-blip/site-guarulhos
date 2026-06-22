@@ -209,9 +209,66 @@ button, [role="button"], a {
   .section-header { margin-bottom: 3.5rem; }
 }
 
+/* Hero headline — maior no mobile (coluna única), menor no desktop (duas colunas) */
+.hero-headline {
+  font-size: clamp(2rem, 7vw, 3rem);
+}
+@media (min-width: 900px) {
+  .hero-headline {
+    font-size: clamp(2.2rem, 2.8vw, 3.2rem);
+  }
+}
+
 /* ===========================
    RESPONSIVE COMPONENT CLASSES
 =========================== */
+
+/* Hero two-column layout */
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.hero-text-col {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-avatar-col {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+}
+.hero-avatar-img { width: 180px; height: auto; }
+.hero-avatar-badge { display: none !important; }
+.hero-avatar-glow { width: 160px !important; height: 160px !important; }
+
+@media (min-width: 900px) {
+  .hero-avatar-img { width: 300px; }
+  .hero-avatar-badge { display: flex !important; }
+  .hero-avatar-glow { width: 260px !important; height: 260px !important; }
+  .hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 500px) 320px;
+    justify-content: center;
+    align-items: end;
+    gap: 2.5rem;
+    padding-bottom: 0;
+  }
+  .hero-text-col {
+    text-align: left;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-avatar-col {
+    width: 320px;
+  }
+}
 
 /* Header */
 .desktop-nav { display: none !important; }
