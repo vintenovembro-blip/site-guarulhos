@@ -52,16 +52,16 @@ export default function Header() {
           paddingTop: "env(safe-area-inset-top, 0px)",
         }}
       >
-        <div className="container-inner" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "4rem" }}>
+        <div className="container-inner" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "5.5rem" }}>
 
           <button onClick={() => go("#inicio")} aria-label="Ir para o início"
             style={{ display: "flex", alignItems: "center", background: "none", border: "none", cursor: "pointer", minHeight: "44px", padding: "0 .25rem" }}>
             <Image
               src={scrolled ? "/images/logos/Logo normal.png" : "/images/logos/Logo branco.png"}
               alt="Sua Chance — Cursinho Preparatório"
-              width={140}
-              height={44}
-              style={{ height: "2.5rem", width: "auto", objectFit: "contain", transition: "opacity .3s" }}
+              width={360}
+              height={112}
+              style={{ height: "6.5rem", width: "auto", objectFit: "contain", transition: "opacity .3s" }}
               priority
             />
           </button>
@@ -91,7 +91,7 @@ export default function Header() {
       <AnimatePresence>
         {open && (
           <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: .22 }}
-            style={{ position: "fixed", top: "calc(4rem + env(safe-area-inset-top, 0px))", left: 0, right: 0, zIndex: 49, background: "#fff", borderBottom: "1px solid #dbeafe", boxShadow: "0 8px 24px rgba(30,64,175,.12)" }}>
+            style={{ position: "fixed", top: "calc(5.5rem + env(safe-area-inset-top, 0px))", left: 0, right: 0, zIndex: 49, background: "#fff", borderBottom: "1px solid #dbeafe", boxShadow: "0 8px 24px rgba(30,64,175,.12)" }}>
             <div className="container-inner" style={{ display: "flex", flexDirection: "column", gap: ".25rem", paddingTop: ".75rem", paddingBottom: "calc(.75rem + env(safe-area-inset-bottom, 0px))" }}>
               {NAV.map((l) => (
                 <button key={l.href} onClick={() => go(l.href)}

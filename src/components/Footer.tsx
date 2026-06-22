@@ -33,9 +33,9 @@ export default function Footer() {
               <Image
                 src="/images/logos/Logo normal.png"
                 alt="Sua Chance — Cursinho Preparatório"
-                width={160}
-                height={50}
-                style={{ height: "2.75rem", width: "auto", objectFit: "contain" }}
+                width={420}
+                height={132}
+                style={{ height: "9rem", width: "auto", objectFit: "contain" }}
               />
             </div>
             <p style={{ color: "#64748b", fontSize: ".82rem", lineHeight: 1.7, marginBottom: ".75rem", maxWidth: "280px" }}>
