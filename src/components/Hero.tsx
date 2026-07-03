@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles, ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
@@ -24,6 +25,7 @@ interface Particle {
 export default function Hero() {
   const [particles, setParticles] = useState<Particle[]>([]);
   const reduce = useReducedMotion();
+  const router = useRouter();
 
   useEffect(() => {
     const list: Particle[] = Array.from({ length: 55 }, (_, i) => ({
@@ -38,8 +40,13 @@ export default function Hero() {
     setParticles(list);
   }, []);
 
-  const go = (id: string) =>
+  const go = (id: string) => {
+    if (id === "#inscricao") {
+      router.push("/inscricao");
+      return;
+    }
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section

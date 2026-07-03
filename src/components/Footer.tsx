@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Heart, Lock } from "lucide-react";
 
@@ -20,8 +21,14 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const scrollTo = (href: string) =>
+  const router = useRouter();
+  const scrollTo = (href: string) => {
+    if (href === "#inscricao") {
+      router.push("/inscricao");
+      return;
+    }
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <footer style={{ background: "#f0f6ff", borderTop: "1px solid #dbeafe" }}>

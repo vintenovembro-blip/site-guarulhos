@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useInView, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Calculator, BookOpen, FlaskConical, Globe2, Landmark, Languages, Microscope, Pen, Map, ChevronRight } from "lucide-react";
 
@@ -30,6 +31,7 @@ export default function Subjects() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const reduce = useReducedMotion();
+  const router = useRouter();
 
   return (
     <section id="materias" ref={ref} className="section-py" style={{ background: "#fff" }}>
@@ -91,7 +93,7 @@ export default function Subjects() {
 
         <motion.div initial={{ opacity: 0, y: reduce ? 0 : 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .4, delay: .5 }} style={{ textAlign: "center", marginTop: "2.5rem" }}>
           <p style={{ color: "#94a3b8", fontSize: ".82rem", marginBottom: "1rem" }}>+ Simulados, revisões e materiais exclusivos para cada disciplina</p>
-          <button onClick={() => document.querySelector("#inscricao")?.scrollIntoView({ behavior: "smooth" })}
+          <button onClick={() => router.push("/inscricao")}
             style={{ padding: "1rem 2rem", background: "linear-gradient(135deg,#2563eb,#3b82f6)", color: "#fff", borderRadius: "1rem", fontWeight: 800, fontSize: "1rem", border: "none", cursor: "pointer", minHeight: "56px", fontFamily: "inherit", boxShadow: "0 8px 24px rgba(37,99,235,.3)" }}>
             Quero Estudar Tudo Isso Grátis!
           </button>

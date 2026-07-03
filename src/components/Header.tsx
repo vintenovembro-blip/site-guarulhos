@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -17,6 +18,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const router = useRouter();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -32,6 +34,10 @@ export default function Header() {
 
   const go = (href: string) => {
     setOpen(false);
+    if (href === "#inscricao") {
+      router.push("/inscricao");
+      return;
+    }
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 

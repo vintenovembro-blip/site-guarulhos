@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { MapPin, BookOpenCheck, Calendar, Users2, CheckCircle2 } from "lucide-react";
 
@@ -24,6 +25,7 @@ export default function About() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const reduce = useReducedMotion();
+  const router = useRouter();
 
   return (
     <section id="sobre" ref={ref} className="section-py" style={{ background: "#f0f6ff" }}>
@@ -81,7 +83,7 @@ export default function About() {
                     </motion.li>
                   ))}
                 </ul>
-                <button onClick={() => document.querySelector("#inscricao")?.scrollIntoView({ behavior: "smooth" })}
+                <button onClick={() => router.push("/inscricao")}
                   style={{ marginTop: "1.5rem", width: "100%", padding: ".875rem", background: "#fff", color: "#2563eb", borderRadius: ".875rem", fontWeight: 800, fontSize: ".95rem", border: "none", cursor: "pointer", minHeight: "52px", fontFamily: "inherit" }}>
                   Garantir Minha Vaga Grátis
                 </button>

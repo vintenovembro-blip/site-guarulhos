@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { ClipboardList, MapPin, Calendar, GraduationCap, ArrowRight, ArrowDown } from "lucide-react";
 
@@ -31,6 +32,7 @@ export default function HowItWorks() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const reduce = useReducedMotion();
+  const router = useRouter();
 
   return (
     <section id="como-funciona" ref={ref} className="section-py" style={{ background: "#f0f6ff" }}>
@@ -78,7 +80,7 @@ export default function HowItWorks() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: reduce ? 0 : 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .8 }} style={{ textAlign: "center", marginTop: "2.5rem" }}>
-          <button onClick={() => document.querySelector("#inscricao")?.scrollIntoView({ behavior: "smooth" })}
+          <button onClick={() => router.push("/inscricao")}
             style={{ display: "inline-flex", alignItems: "center", gap: ".75rem", padding: "1rem 1.75rem", background: "linear-gradient(135deg,#2563eb,#3b82f6)", color: "#fff", borderRadius: "1rem", fontWeight: 800, fontSize: "1rem", border: "none", cursor: "pointer", minHeight: "56px", fontFamily: "inherit", boxShadow: "0 8px 24px rgba(37,99,235,.3)" }}>
             Quero Minha Vaga Grátis!
             <ArrowRight style={{ width: "1.15rem", height: "1.15rem", flexShrink: 0 }} />
