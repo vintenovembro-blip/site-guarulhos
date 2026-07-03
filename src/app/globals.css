@@ -239,23 +239,51 @@ button, [role="button"], a {
 }
 .hero-avatar-col {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 200px;
 }
-.hero-avatar-img { width: 180px; height: auto; }
+.hero-phone-frame {
+  position: relative;
+  width: 160px;
+  aspect-ratio: 372 / 772;
+  background: #111318;
+  border-radius: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.08);
+}
+.hero-phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 18px;
+  background: #111318;
+  border-radius: 0 0 .9rem .9rem;
+  z-index: 2;
+}
+.hero-phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  background: #fff;
+}
 .hero-avatar-badge { display: none !important; }
-.hero-avatar-glow { width: 160px !important; height: 160px !important; }
+.hero-avatar-glow { width: 130px !important; height: 240px !important; }
 
 @media (min-width: 900px) {
-  .hero-avatar-img { width: 300px; }
+  .hero-phone-frame { width: 230px; }
   .hero-avatar-badge { display: flex !important; }
-  .hero-avatar-glow { width: 260px !important; height: 260px !important; }
+  .hero-avatar-glow { width: 190px !important; height: 360px !important; }
   .hero-layout {
     display: grid;
     grid-template-columns: minmax(0, 500px) 320px;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     gap: 2.5rem;
     padding-bottom: 0;
   }
@@ -268,6 +296,20 @@ button, [role="button"], a {
   .hero-avatar-col {
     width: 320px;
   }
+}
+
+/* Admin panel */
+.admin-panel-root { display: flex; flex-direction: column; }
+.admin-mobile-bar { display: flex !important; }
+.admin-mobile-nav { display: flex !important; }
+.admin-desktop-sidebar { display: none !important; }
+.admin-dashboard-grid { grid-template-columns: minmax(0, 1fr) !important; }
+@media (min-width: 900px) {
+  .admin-panel-root { flex-direction: row; }
+  .admin-mobile-bar { display: none !important; }
+  .admin-mobile-nav { display: none !important; }
+  .admin-desktop-sidebar { display: flex !important; }
+  .admin-dashboard-grid { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) !important; }
 }
 
 /* Header */

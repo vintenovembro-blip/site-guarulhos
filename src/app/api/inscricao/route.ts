@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createSupabaseServiceClient } from "@/lib/supabase/service";
 
 export async function POST(request: NextRequest) {
   try {
@@ -20,16 +21,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Aqui você pode integrar com seu serviço de e-mail, CRM ou planilha
-    // Exemplo: Resend, Nodemailer, Google Sheets API, etc.
-    console.log("Nova inscrição recebida:", {
-      nome,
-      email,
-      whatsapp,
-      serie,
-      interesse,
-      timestamp: new Date().toISOString(),
-    });
+    const supabase = createSupabaseServiceClient();
+    const { error } = await supabase
+      .from("inscricoes")
+      .insert({ nome, email, whatsapp, serie, interesse });
+
+    if (error) {
+      console.error("Erro ao salvar inscrição no Supabase:", error);
+      return NextResponse.json(
+        { error: "Erro interno. Tente novamente em instantes." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       {

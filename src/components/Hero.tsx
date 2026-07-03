@@ -146,7 +146,7 @@ export default function Hero() {
 
           {/* ── RIGHT: avatar ── */}
           <div className="hero-avatar-col" aria-hidden>
-            <div style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
+            <div style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
               {/* Glow behind avatar */}
               <div className="hero-avatar-glow" style={{ position: "absolute", bottom: "10%", left: "50%", transform: "translateX(-50%)", background: "radial-gradient(ellipse, rgba(255,255,255,.35) 0%, rgba(255,255,255,.1) 50%, transparent 75%)", borderRadius: "50%", filter: "blur(18px)", pointerEvents: "none" }} />
@@ -183,16 +183,23 @@ export default function Hero() {
                     Sua vez!
                   </motion.div>
 
-                  <Image
-                    src="/images/logos/Aumenta mais o logo. (1).png"
-                    alt="Vem fazer parte do Cursinho 20 de Novembro"
-                    width={700}
-                    height={1040}
-                    className="hero-avatar-img"
-                    style={{ objectFit: "contain", filter: "drop-shadow(0 20px 40px rgba(0,0,0,.25))" }}
-                    priority
-                    unoptimized
-                  />
+                  <div
+                    className="hero-phone-frame"
+                    style={{ filter: "drop-shadow(0 20px 40px rgba(0,0,0,.25))" }}
+                  >
+                    <div className="hero-phone-notch" />
+                    <div className="hero-phone-screen">
+                      <Image
+                        src="/images/logos/Captura de tela 2026-06-25 135406.png"
+                        alt="Portal do aluno do Cursinho 20 de Novembro"
+                        fill
+                        sizes="(min-width: 900px) 230px, 160px"
+                        style={{ objectFit: "cover" }}
+                        priority
+                        unoptimized
+                      />
+                    </div>
+                  </div>
                 </motion.div>
 
               </motion.div>
