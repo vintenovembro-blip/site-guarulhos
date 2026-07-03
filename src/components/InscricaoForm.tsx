@@ -32,7 +32,7 @@ export default function InscricaoForm() {
           <motion.div className="inscricao-pitch" initial={{ opacity: 0, y: reduce ? 0 : 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .55 }} style={{ color: "#f0f6ff", minWidth: 0 }}>
             <div className="glass" style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", padding: ".4rem 1rem", borderRadius: "999px", fontSize: ".8rem", marginBottom: "1.25rem" }}>
               <Sparkles style={{ width: "1rem", height: "1rem", color: "#fbbf24", flexShrink: 0 }} />
-              <span style={{ color: "#fff" }}>400 vagas presenciais aos sábados</span>
+              <span style={{ color: "#fff" }}>800 vagas presenciais aos sábados</span>
             </div>
 
             <h2 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 900, fontSize: "clamp(1.75rem, 5vw, 2.75rem)", lineHeight: 1.1, marginBottom: "1rem" }}>
@@ -46,7 +46,7 @@ export default function InscricaoForm() {
             </p>
 
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: ".75rem" }}>
-              {["200 vagas em cada CEU (Bonsucesso e Continental)", "Aulas aos sábados, com horário por unidade", "Metodologia CPOP alinhada ao MEC", "Para jovens de 15 a 25 anos de Guarulhos"].map((item, i) => (
+              {["400 vagas em cada CEU (Bonsucesso e Continental)", "Aulas aos sábados, com horário por unidade", "Metodologia CPOP alinhada ao MEC", "Para jovens de 15 a 25 anos de Guarulhos"].map((item, i) => (
                 <motion.li key={item} initial={{ opacity: 0, x: reduce ? 0 : -14 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: .1 * i + .3 }}
                   style={{ display: "flex", alignItems: "center", gap: ".75rem" }}>
                   <CheckCircle2 style={{ width: "1.15rem", height: "1.15rem", color: "#4ade80", flexShrink: 0 }} />

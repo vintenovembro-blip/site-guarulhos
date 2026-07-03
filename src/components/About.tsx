@@ -18,7 +18,7 @@ const checkItems = [
   "Simulados no formato Vestibulinho e ENEM",
   "Professores alinhados à metodologia CPOP",
   "2 unidades CEU em Guarulhos",
-  "400 vagas — 200 por unidade",
+  "800 vagas — 400 por unidade",
 ];
 
 export default function About() {

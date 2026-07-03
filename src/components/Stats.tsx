@@ -5,7 +5,7 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { Users, MapPin, UserCheck, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: Users,     value: 400, suffix: "",           label: "Vagas Presenciais", sub: "200 por unidade CEU",              iconBg: "#dbeafe", iconColor: "#2563eb", numColor: "#2563eb" },
+  { icon: Users,     value: 800, suffix: "",           label: "Vagas Presenciais", sub: "400 por unidade CEU",              iconBg: "#dbeafe", iconColor: "#2563eb", numColor: "#2563eb" },
   { icon: MapPin,    value: 2,   suffix: "",           label: "Unidades CEU",      sub: "Bonsucesso · Continental",         iconBg: "#fef9c3", iconColor: "#ca8a04", numColor: "#a16207" },
   { icon: Calendar,  value: 0,   suffix: "Sábados",    label: "Dia de Aula",       sub: "Manhã ou tarde, conforme a unidade", iconBg: "#fee2e2", iconColor: "#ef4444", numColor: "#dc2626" },
   { icon: UserCheck, value: 0,   suffix: "15 a 25 anos", label: "Faixa Etária",    sub: "Jovens de Guarulhos",               iconBg: "#dcfce7", iconColor: "#16a34a", numColor: "#15803d" },

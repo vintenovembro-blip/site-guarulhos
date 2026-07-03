@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Onde são as aulas presenciais?",
-    answer: "As aulas presenciais acontecem aos sábados em dois Centros de Educação Unificados (CEUs) de Guarulhos: CEU Bonsucesso e CEU Continental. Cada unidade oferece 200 vagas, totalizando 400 vagas presenciais.",
+    answer: "As aulas presenciais acontecem aos sábados em dois Centros de Educação Unificados (CEUs) de Guarulhos: CEU Bonsucesso e CEU Continental. Cada unidade oferece 400 vagas, totalizando 800 vagas presenciais.",
   },
   {
     question: "Os dois CEUs têm o mesmo horário?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "Quantas vagas estão disponíveis?",
-    answer: "São 400 vagas presenciais, sendo 200 no CEU Bonsucesso e 200 no CEU Continental.",
+    answer: "São 800 vagas presenciais, sendo 400 no CEU Bonsucesso e 400 no CEU Continental.",
   },
 ];
 
