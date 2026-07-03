@@ -6,9 +6,9 @@ import { Sparkles, ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
 
 const STATS = [
-  { value: "600",  label: "Vagas Presenciais" },
-  { value: "3",    label: "Unidades CEU" },
-  { value: "∞",   label: "Vagas Online" },
+  { value: "400",  label: "Vagas Presenciais" },
+  { value: "2",    label: "Unidades CEU" },
+  { value: "Sáb",  label: "Dia de Aula" },
 ];
 
 interface Particle {

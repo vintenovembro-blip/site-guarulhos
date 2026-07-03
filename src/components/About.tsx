@@ -2,22 +2,22 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { MapPin, BookOpenCheck, Wifi, Users2, CheckCircle2 } from "lucide-react";
+import { MapPin, BookOpenCheck, Calendar, Users2, CheckCircle2 } from "lucide-react";
 
 const diferenciais = [
-  { icon: MapPin,        title: "3 Unidades CEU",             description: "Aulas presenciais nas quintas, sextas e sábados nos CEUs dos Pimentas, Bonsucesso e Cabuçu — próximo de você.", iconBg: "#dbeafe", iconColor: "#2563eb", border: "#bfdbfe", bg: "#eff6ff" },
-  { icon: Wifi,          title: "Formato Híbrido",            description: "Não pode vir presencialmente? Sem problema. Vagas ilimitadas no formato híbrido — acompanhe tudo online pela plataforma digital.",     iconBg: "#fef9c3", iconColor: "#ca8a04", border: "#fde68a", bg: "#fefce8" },
+  { icon: MapPin,        title: "2 Unidades CEU",             description: "Aulas presenciais aos sábados no CEU Bonsucesso e no CEU Continental — próximo de você.", iconBg: "#dbeafe", iconColor: "#2563eb", border: "#bfdbfe", bg: "#eff6ff" },
+  { icon: Calendar,      title: "Aulas aos Sábados",          description: "Turmas pela manhã no CEU Bonsucesso (8h às 12h15) ou à tarde no CEU Continental (13h30 às 17h30).",     iconBg: "#fef9c3", iconColor: "#ca8a04", border: "#fde68a", bg: "#fefce8" },
   { icon: BookOpenCheck, title: "Metodologia CPOP/MEC",       description: "Conteúdo 100% alinhado às diretrizes dos cursinhos populares CPOP vinculados ao Ministério da Educação (Edital 04/2026).",     iconBg: "#dcfce7", iconColor: "#16a34a", border: "#bbf7d0", bg: "#f0fdf4" },
   { icon: Users2,        title: "Jovens de 15 a 25 anos",     description: "Voltado para jovens moradores das periferias de Guarulhos que não têm como custear cursinhos particulares.",                     iconBg: "#ede9fe", iconColor: "#7c3aed", border: "#ddd6fe", bg: "#f5f3ff" },
 ];
 
 const checkItems = [
-  "Aulas presenciais e acesso online",
+  "Aulas presenciais aos sábados",
   "Material didático incluso — sem custo",
   "Simulados no formato Vestibulinho e ENEM",
   "Professores alinhados à metodologia CPOP",
-  "3 unidades CEU em Guarulhos",
-  "Formato híbrido com vagas ilimitadas",
+  "2 unidades CEU em Guarulhos",
+  "400 vagas — 200 por unidade",
 ];
 
 export default function About() {

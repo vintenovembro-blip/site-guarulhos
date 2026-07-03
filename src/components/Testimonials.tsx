@@ -6,23 +6,23 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ana Beatriz S.", role: "Aprovada na ETEC — Técnico em Informática · Guarulhos",
-    text: "Moro nos Pimentas e não tinha como pagar cursinho. O Sua Chance chegou no CEU do meu bairro e me preparou de verdade. Passei no Vestibulinho na primeira tentativa. Obrigada, Cursinho 20 de Novembro!",
+    name: "Ana Beatriz S.", role: "Aprovada na ETEC — Técnico em Informática · Bonsucesso",
+    text: "Moro perto do Bonsucesso e não tinha como pagar cursinho. O Sua Chance chegou no CEU do meu bairro e me preparou de verdade. Passei no Vestibulinho na primeira tentativa. Obrigada, Cursinho 20 de Novembro!",
     stars: 5, avatar: "AB", color: "#2563eb",
   },
   {
     name: "Lucas M.", role: "Aprovado na ETEC — Técnico em Administração · Bonsucesso",
-    text: "Frequentei o CEU Bonsucesso toda quinta, sexta e sábado. Os professores seguem o CPOP do MEC e o conteúdo é exatamente o que cai no Vestibulinho. O programa mudou minha história!",
+    text: "Frequentei o CEU Bonsucesso todo sábado de manhã. Os professores seguem o CPOP do MEC e o conteúdo é exatamente o que cai no Vestibulinho. O programa mudou minha história!",
     stars: 5, avatar: "LM", color: "#7c3aed",
   },
   {
-    name: "Giovanna P.", role: "Aprovada no ENEM — Bolsa PROUNI · Cabuçu",
-    text: "Usei o formato híbrido porque trabalhava de dia. Acompanhei tudo pela plataforma e tirei a nota que precisava no ENEM. Agora estou na faculdade com bolsa integral. Isso é inclusão de verdade!",
+    name: "Giovanna P.", role: "Aprovada no ENEM — Bolsa PROUNI · Continental",
+    text: "Estudei no CEU Continental aos sábados à tarde, o que encaixou perfeitamente com meu trabalho de manhã. Tirei a nota que precisava no ENEM e agora estou na faculdade com bolsa integral. Isso é inclusão de verdade!",
     stars: 5, avatar: "GP", color: "#16a34a",
   },
   {
-    name: "Rafael T.", role: "Aprovado na ETEC — Técnico em Eletrônica · Periferia de Guarulhos",
-    text: "Vim do Cabuçu sem acreditar que conseguiria. A equipe do Sua Chance e da Secretaria de Juventude fizeram toda a diferença. O programa democratizou o acesso que a gente da periferia nunca teve.",
+    name: "Rafael T.", role: "Aprovado na ETEC — Técnico em Eletrônica · Parque Continental",
+    text: "Vim do Parque Continental sem acreditar que conseguiria. A equipe do Sua Chance e da Secretaria de Juventude fizeram toda a diferença. O programa democratizou o acesso que a gente da periferia nunca teve.",
     stars: 5, avatar: "RT", color: "#ea580c",
   },
 ];

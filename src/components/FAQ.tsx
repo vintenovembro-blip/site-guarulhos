@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     question: "Onde são as aulas presenciais?",
-    answer: "As aulas presenciais acontecem às quintas, sextas e sábados nas instalações de três Centros de Educação Unificados (CEUs): CEU Pimentas, CEU Bonsucesso e CEU Cabuçu. Cada unidade oferece 200 vagas, totalizando 600 vagas presenciais.",
+    answer: "As aulas presenciais acontecem aos sábados em dois Centros de Educação Unificados (CEUs) de Guarulhos: CEU Bonsucesso e CEU Continental. Cada unidade oferece 200 vagas, totalizando 400 vagas presenciais.",
   },
   {
-    question: "Quem não pode comparecer presencialmente consegue participar?",
-    answer: "Sim! O programa oferece formato híbrido com vagas ilimitadas. Os estudantes que optarem por esta modalidade acompanham todo o conteúdo pedagógico integralmente por meio de plataformas digitais de ensino, sem nenhuma desvantagem em relação ao conteúdo.",
+    question: "Os dois CEUs têm o mesmo horário?",
+    answer: "Não. O CEU Bonsucesso tem aulas aos sábados das 8h às 12h15, e o CEU Continental aos sábados das 13h30 às 17h30. Escolha a unidade e o horário que melhor se encaixam na sua rotina.",
   },
   {
     question: "Qual metodologia o programa utiliza?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "Quantas vagas estão disponíveis?",
-    answer: "São 600 vagas presenciais (200 por CEU) e vagas ilimitadas no formato híbrido/online. As vagas presenciais são distribuídas entre as unidades dos Pimentas, Bonsucesso e Cabuçu.",
+    answer: "São 400 vagas presenciais, sendo 200 no CEU Bonsucesso e 200 no CEU Continental.",
   },
 ];
 

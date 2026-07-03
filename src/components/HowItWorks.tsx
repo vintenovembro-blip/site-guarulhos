@@ -2,22 +2,22 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { ClipboardList, MapPin, Monitor, GraduationCap, ArrowRight, ArrowDown } from "lucide-react";
+import { ClipboardList, MapPin, Calendar, GraduationCap, ArrowRight, ArrowDown } from "lucide-react";
 
 const steps = [
   {
     number: "01", icon: ClipboardList, title: "Faça sua Inscrição",
-    description: "Preencha o formulário abaixo em menos de 2 minutos. Informe se prefere o formato presencial (CEU) ou online. Sem custo, sem burocracia.",
+    description: "Preencha o formulário abaixo em menos de 2 minutos. Sem custo, sem burocracia.",
     iconBg: "#2563eb", cardBg: "#eff6ff", cardBorder: "#bfdbfe",
   },
   {
     number: "02", icon: MapPin, title: "Escolha sua Unidade CEU",
-    description: "Se optar pelo presencial, escolha entre CEU Pimentas, CEU Bonsucesso ou CEU Cabuçu — as unidades mais próximas das periferias de Guarulhos.",
+    description: "Escolha entre CEU Bonsucesso ou CEU Continental — as unidades mais próximas das periferias de Guarulhos.",
     iconBg: "#7c3aed", cardBg: "#f5f3ff", cardBorder: "#ddd6fe",
   },
   {
-    number: "03", icon: Monitor, title: "Participe das Aulas",
-    description: "Aulas presenciais às quintas, sextas e sábados. Quem opta pelo híbrido acompanha tudo integralmente pela plataforma digital — vagas ilimitadas.",
+    number: "03", icon: Calendar, title: "Participe das Aulas",
+    description: "Aulas presenciais aos sábados: pela manhã no CEU Bonsucesso (8h às 12h15) ou à tarde no CEU Continental (13h30 às 17h30).",
     iconBg: "#0891b2", cardBg: "#ecfeff", cardBorder: "#a5f3fc",
   },
   {
@@ -48,7 +48,7 @@ export default function HowItWorks() {
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: reduce ? 0 : 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .45, delay: .15 }}
             style={{ color: "#475569", fontSize: "clamp(.9rem, 2.5vw, 1.05rem)", maxWidth: "560px", margin: "0 auto", lineHeight: 1.65 }}>
-            Presencial nos CEUs ou online pelo híbrido — você escolhe o formato que funciona para a sua vida.
+            Aulas presenciais aos sábados no CEU Bonsucesso ou no CEU Continental — você escolhe a unidade mais perto de você.
           </motion.p>
         </div>
 

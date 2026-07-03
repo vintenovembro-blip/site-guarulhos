@@ -104,6 +104,7 @@ export default async function AdminDashboardPage() {
                   <th style={{ padding: ".5rem .75rem .5rem 0" }}>Nome</th>
                   <th style={{ padding: ".5rem .75rem" }}>Contato</th>
                   <th style={{ padding: ".5rem .75rem" }}>Interesse</th>
+                  <th style={{ padding: ".5rem .75rem" }}>Unidade</th>
                   <th style={{ padding: ".5rem 0" }}>Data</th>
                 </tr>
               </thead>
@@ -117,6 +118,7 @@ export default async function AdminDashboardPage() {
                       <span style={{ color: "#94a3b8" }}>{row.whatsapp}</span>
                     </td>
                     <td style={{ padding: ".65rem .75rem", color: "#475569" }}>{row.interesse}</td>
+                    <td style={{ padding: ".65rem .75rem", color: "#475569", whiteSpace: "nowrap" }}>{row.unidade || "—"}</td>
                     <td style={{ padding: ".65rem 0", color: "#94a3b8", whiteSpace: "nowrap" }}>
                       {new Date(row.created_at).toLocaleDateString("pt-BR")}
                     </td>

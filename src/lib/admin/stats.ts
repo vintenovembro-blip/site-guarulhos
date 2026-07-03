@@ -7,6 +7,13 @@ export interface Inscricao {
   whatsapp: string;
   serie: string;
   interesse: string;
+  unidade: string;
+  data_nascimento: string;
+  cep: string;
+  rua: string;
+  numero: string;
+  bairro: string;
+  cidade: string;
   created_at: string;
 }
 
@@ -67,7 +74,7 @@ export async function getDashboardStats(): Promise<DashboardStats> {
     supabase.from("inscricoes").select("created_at").gte("created_at", since14),
     supabase
       .from("inscricoes")
-      .select("id,nome,email,whatsapp,serie,interesse,created_at")
+      .select("id,nome,email,whatsapp,serie,interesse,unidade,data_nascimento,cep,rua,numero,bairro,cidade,created_at")
       .order("created_at", { ascending: false })
       .limit(5),
     supabase

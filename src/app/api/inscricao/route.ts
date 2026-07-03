@@ -4,9 +4,15 @@ import { createSupabaseServiceClient } from "@/lib/supabase/service";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { nome, email, whatsapp, serie, interesse } = body;
+    const {
+      nome, email, whatsapp, serie, interesse, unidade,
+      dataNascimento, cep, rua, numero, bairro, cidade,
+    } = body;
 
-    if (!nome || !email || !whatsapp || !serie || !interesse) {
+    if (
+      !nome || !email || !whatsapp || !serie || !interesse || !unidade ||
+      !dataNascimento || !cep || !rua || !numero || !bairro || !cidade
+    ) {
       return NextResponse.json(
         { error: "Todos os campos obrigatórios devem ser preenchidos." },
         { status: 400 }
@@ -24,7 +30,10 @@ export async function POST(request: NextRequest) {
     const supabase = createSupabaseServiceClient();
     const { error } = await supabase
       .from("inscricoes")
-      .insert({ nome, email, whatsapp, serie, interesse });
+      .insert({
+        nome, email, whatsapp, serie, interesse, unidade,
+        data_nascimento: dataNascimento, cep, rua, numero, bairro, cidade,
+      });
 
     if (error) {
       console.error("Erro ao salvar inscrição no Supabase:", error);

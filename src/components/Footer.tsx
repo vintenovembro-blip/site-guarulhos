@@ -78,7 +78,7 @@ export default function Footer() {
           <div>
             <h4 style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: ".85rem", marginBottom: "1rem", color: "#2563eb" }}>Unidades CEU</h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: ".5rem", marginBottom: "1.25rem" }}>
-              {["CEU Pimentas", "CEU Bonsucesso", "CEU Cabuçu", "Online (Híbrido)"].map((label) => (
+              {["CEU Bonsucesso", "CEU Continental"].map((label) => (
                 <li key={label}>
                   <button onClick={() => scrollTo("#inscricao")}
                     style={{ background: "none", border: "none", cursor: "pointer", color: "#64748b", fontSize: ".82rem", padding: 0, minHeight: "36px", fontFamily: "inherit", transition: "color .2s" }}

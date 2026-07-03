@@ -8,7 +8,7 @@ async function getInscricoes(): Promise<Inscricao[]> {
   const supabase = createSupabaseServiceClient();
   const { data } = await supabase
     .from("inscricoes")
-    .select("id,nome,email,whatsapp,serie,interesse,created_at")
+    .select("id,nome,email,whatsapp,serie,interesse,unidade,data_nascimento,cep,rua,numero,bairro,cidade,created_at")
     .order("created_at", { ascending: false })
     .limit(2000);
   return data ?? [];
