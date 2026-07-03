@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
+import { Heart, Lock } from "lucide-react";
 
 const navLinks = [
   { label: "Início",        href: "#inicio" },
@@ -106,6 +107,16 @@ export default function Footer() {
             <p style={{ color: "#94a3b8", fontSize: ".72rem", display: "flex", alignItems: "center", gap: ".25rem" }}>
               Feito com <Heart style={{ width: ".75rem", height: ".75rem", color: "#f87171", fill: "#f87171" }} aria-hidden /> para quem quer crescer
             </p>
+
+            <Link
+              href="/admin/login"
+              style={{ color: "#94a3b8", fontSize: ".72rem", display: "flex", alignItems: "center", gap: ".3rem", textDecoration: "none", transition: "color .2s" }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#2563eb"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#94a3b8"; }}
+            >
+              <Lock style={{ width: ".7rem", height: ".7rem" }} aria-hidden />
+              Área Administrativa
+            </Link>
           </div>
         </div>
       </div>
