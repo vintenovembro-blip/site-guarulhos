@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  User, Mail, Phone, BookOpen, Target, MapPin, Calendar, Hash,
+  User, Mail, Phone, BookOpen, Target, MapPin, Hash,
   CheckCircle2, Loader2, AlertCircle, Sparkles, ArrowRight, ArrowLeft,
 } from "lucide-react";
 
@@ -21,6 +21,21 @@ interface FormData {
   interesse: string;
   unidade: string;
   whatsapp: string;
+}
+
+const MESES = [
+  "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",
+];
+
+const CURRENT_YEAR = new Date().getFullYear();
+const DIAS = Array.from({ length: 31 }, (_, i) => i + 1);
+const ANOS = Array.from({ length: 91 }, (_, i) => CURRENT_YEAR - 10 - i);
+
+function isValidCalendarDate(iso: string) {
+  const [y, m, d] = iso.split("-").map(Number);
+  const date = new Date(y, m - 1, d);
+  return date.getFullYear() === y && date.getMonth() === m - 1 && date.getDate() === d;
 }
 
 const STEPS: { title: string; fields: (keyof FormData)[] }[] = [
@@ -54,6 +69,18 @@ const inputErrorStyle: React.CSSProperties = {
 
 const selectStyle: React.CSSProperties = { ...inputStyle, paddingRight: "2rem", cursor: "pointer" };
 
+const compactSelectStyle: React.CSSProperties = {
+  ...inputStyle,
+  padding: ".875rem .5rem",
+  cursor: "pointer",
+};
+
+const compactSelectErrorStyle: React.CSSProperties = {
+  ...compactSelectStyle,
+  borderColor: "#fca5a5",
+  background: "#fff5f5",
+};
+
 const labelStyle: React.CSSProperties = {
   display: "block",
   fontSize: ".7rem",
@@ -85,6 +112,9 @@ export default function InscricaoWizard() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [cepLoading, setCepLoading] = useState(false);
+  const [dia, setDia] = useState("");
+  const [mes, setMes] = useState("");
+  const [ano, setAno] = useState("");
 
   const {
     register,
@@ -94,6 +124,15 @@ export default function InscricaoWizard() {
     formState: { errors },
     reset,
   } = useForm<FormData>();
+
+  const updateNascimento = (novoDia: string, novoMes: string, novoAno: string) => {
+    if (novoDia && novoMes && novoAno) {
+      const iso = `${novoAno}-${novoMes.padStart(2, "0")}-${novoDia.padStart(2, "0")}`;
+      setValue("dataNascimento", iso, { shouldValidate: true });
+    } else {
+      setValue("dataNascimento", "", { shouldValidate: true });
+    }
+  };
 
   const isLastStep = step === STEPS.length - 1;
 
@@ -195,10 +234,39 @@ export default function InscricaoWizard() {
               </div>
 
               <div>
-                <label htmlFor="f-nascimento" style={labelStyle}>Data de Nascimento *</label>
-                <div style={fieldPos}>
-                  <Calendar style={iconStyle} />
-                  <input id="f-nascimento" type="date" autoComplete="bday" {...register("dataNascimento", { required: "Data de nascimento é obrigatória" })} style={errors.dataNascimento ? inputErrorStyle : inputStyle} />
+                <label style={labelStyle}>Data de Nascimento *</label>
+                <input type="hidden" {...register("dataNascimento", {
+                  required: "Data de nascimento é obrigatória",
+                  validate: (v) => isValidCalendarDate(v) || "Data inválida",
+                })} />
+                <div className="birthdate-row">
+                  <select
+                    aria-label="Dia"
+                    value={dia}
+                    onChange={(e) => { setDia(e.target.value); updateNascimento(e.target.value, mes, ano); }}
+                    style={errors.dataNascimento ? compactSelectErrorStyle : compactSelectStyle}
+                  >
+                    <option value="">Dia</option>
+                    {DIAS.map((d) => <option key={d} value={d}>{d}</option>)}
+                  </select>
+                  <select
+                    aria-label="Mês"
+                    value={mes}
+                    onChange={(e) => { setMes(e.target.value); updateNascimento(dia, e.target.value, ano); }}
+                    style={errors.dataNascimento ? compactSelectErrorStyle : compactSelectStyle}
+                  >
+                    <option value="">Mês</option>
+                    {MESES.map((nome, i) => <option key={nome} value={i + 1}>{nome}</option>)}
+                  </select>
+                  <select
+                    aria-label="Ano"
+                    value={ano}
+                    onChange={(e) => { setAno(e.target.value); updateNascimento(dia, mes, e.target.value); }}
+                    style={errors.dataNascimento ? compactSelectErrorStyle : compactSelectStyle}
+                  >
+                    <option value="">Ano</option>
+                    {ANOS.map((a) => <option key={a} value={a}>{a}</option>)}
+                  </select>
                 </div>
                 <FieldError message={errors.dataNascimento?.message} />
               </div>
