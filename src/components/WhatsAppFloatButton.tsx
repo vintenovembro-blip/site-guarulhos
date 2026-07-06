@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-const WHATSAPP_URL = "https://wa.me/5511963056971?text=Ol%C3%A1!";
+const WHATSAPP_URL = "https://wa.me/5511963056974?text=Ol%C3%A1!";
 
 export default function WhatsAppFloatButton() {
   const pathname = usePathname();
