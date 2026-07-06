@@ -7,7 +7,7 @@ import { Sparkles, ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
 
 const STATS = [
-  { value: "800",  label: "Vagas Presenciais" },
+  { value: "400",  label: "Vagas Presenciais" },
   { value: "2",    label: "Unidades CEU" },
   { value: "Sáb",  label: "Dia de Aula" },
 ];

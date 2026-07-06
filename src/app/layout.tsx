@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import PageViewTracker from "@/components/PageViewTracker";
+import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -124,6 +125,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <PageViewTracker />
         {children}
+        <WhatsAppFloatButton />
       </body>
     </html>
   );
