@@ -1,12 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   User, Mail, Phone, BookOpen, Target, MapPin, Hash,
   CheckCircle2, Loader2, AlertCircle, Sparkles, ArrowRight, ArrowLeft,
 } from "lucide-react";
+import { CURSO_AO_VIVO } from "@/lib/unidades";
+
+interface UnidadeDisponivel {
+  value: string;
+  label: string;
+  vagasRestantes: number;
+  lotada: boolean;
+}
 
 interface FormData {
   nome: string;
@@ -115,6 +123,9 @@ export default function InscricaoWizard() {
   const [dia, setDia] = useState("");
   const [mes, setMes] = useState("");
   const [ano, setAno] = useState("");
+  const [unidades, setUnidades] = useState<UnidadeDisponivel[]>([]);
+  const [todasLotadas, setTodasLotadas] = useState(false);
+  const [vagasLoading, setVagasLoading] = useState(true);
 
   const {
     register,
@@ -124,6 +135,26 @@ export default function InscricaoWizard() {
     formState: { errors },
     reset,
   } = useForm<FormData>();
+
+  useEffect(() => {
+    let cancelled = false;
+    const fetchVagas = async () => {
+      setVagasLoading(true);
+      try {
+        const res = await fetch("/api/vagas");
+        const json = await res.json();
+        if (!cancelled && res.ok) {
+          setUnidades(json.unidades);
+          setTodasLotadas(json.todasLotadas);
+        }
+      } catch {
+        // se falhar, mantemos as unidades como estavam (fail-open no primeiro load)
+      }
+      if (!cancelled) setVagasLoading(false);
+    };
+    fetchVagas();
+    return () => { cancelled = true; };
+  }, [step === 2]);
 
   const updateNascimento = (novoDia: string, novoMes: string, novoAno: string) => {
     if (novoDia && novoMes && novoAno) {
@@ -368,13 +399,23 @@ export default function InscricaoWizard() {
                 <label htmlFor="f-unidade" style={labelStyle}>Unidade *</label>
                 <div style={fieldPos}>
                   <MapPin style={iconStyle} />
-                  <select id="f-unidade" {...register("unidade", { required: true })} style={errors.unidade ? inputErrorStyle : selectStyle}>
-                    <option value="">Selecione</option>
-                    <option value="ceu-bonsucesso">CEU Bonsucesso</option>
-                    <option value="ceu-continental">CEU Continental</option>
+                  <select id="f-unidade" disabled={vagasLoading} {...register("unidade", { required: true })} style={errors.unidade ? inputErrorStyle : selectStyle}>
+                    <option value="">{vagasLoading ? "Carregando vagas..." : "Selecione"}</option>
+                    {todasLotadas ? (
+                      <option value={CURSO_AO_VIVO.value}>{CURSO_AO_VIVO.label}</option>
+                    ) : (
+                      unidades
+                        .filter((u) => !u.lotada)
+                        .map((u) => <option key={u.value} value={u.value}>{u.label}</option>)
+                    )}
                   </select>
                 </div>
                 {errors.unidade && <FieldError message="Obrigatório" />}
+                {todasLotadas && (
+                  <p style={{ marginTop: ".3rem", fontSize: ".75rem", color: "#94a3b8" }}>
+                    As vagas presenciais foram preenchidas — inscreva-se no curso 100% online.
+                  </p>
+                )}
               </div>
 
               <div>
