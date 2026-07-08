@@ -38,7 +38,7 @@ const MESES = [
 
 const CURRENT_YEAR = new Date().getFullYear();
 const DIAS = Array.from({ length: 31 }, (_, i) => i + 1);
-const ANOS = Array.from({ length: 91 }, (_, i) => CURRENT_YEAR - 10 - i);
+const ANOS = Array.from({ length: 91 }, (_, i) => CURRENT_YEAR - 15 - i);
 
 function isValidCalendarDate(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);

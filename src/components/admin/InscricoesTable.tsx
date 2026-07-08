@@ -10,6 +10,10 @@ function formatDateOnly(iso: string) {
 }
 
 function toCsv(rows: Inscricao[]) {
+  // Excel em português (pt-BR) usa "," como separador decimal, então ele
+  // espera ";" como delimitador de coluna no CSV — usar "," faz tudo cair
+  // numa única célula.
+  const SEP = ";";
   const header = [
     "Nome", "Data de Nascimento", "E-mail", "WhatsApp",
     "CEP", "Rua", "Número", "Bairro", "Cidade",
@@ -25,9 +29,9 @@ function toCsv(rows: Inscricao[]) {
       new Date(r.created_at).toLocaleString("pt-BR"),
     ]
       .map((v) => `"${String(v ?? "").replace(/"/g, '""')}"`)
-      .join(",")
+      .join(SEP)
   );
-  return [header.join(","), ...lines].join("\n");
+  return [header.join(SEP), ...lines].join("\r\n");
 }
 
 export default function InscricoesTable({ inscricoes }: { inscricoes: Inscricao[] }) {
