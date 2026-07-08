@@ -50,7 +50,7 @@ export default function Footer() {
               />
             </div>
             <p style={{ color: "#64748b", fontSize: ".82rem", lineHeight: 1.7, marginBottom: ".75rem", maxWidth: "280px" }}>
-              Programa educacional gratuito para jovens de 15 a 25 anos das periferias de Guarulhos — preparação para o Vestibulinho ETEC e ENEM.
+              Programa educacional gratuito para jovens de 15 a 29 anos das periferias de Guarulhos — preparação para o Vestibulinho ETEC e ENEM.
             </p>
             <div style={{ marginBottom: "1rem", display: "flex", flexDirection: "column", gap: ".25rem" }}>
               <span style={{ fontSize: ".72rem", color: "#94a3b8", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".04em" }}>Realização</span>

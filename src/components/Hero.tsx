@@ -106,7 +106,7 @@ export default function Hero() {
               style={{ color: "rgba(255,255,255,.9)", fontSize: "clamp(1rem, 3vw, 1.2rem)", lineHeight: 1.7, maxWidth: "520px", marginBottom: "2.5rem" }}
             >
               Uma iniciativa do <strong style={{ color: "#fff" }}>Cursinho 20 de Novembro</strong> com a{" "}
-              <strong style={{ color: "#fff" }}>Secretaria de Juventude de Guarulhos</strong> — para jovens de 15 a 25 anos das periferias.{" "}
+              <strong style={{ color: "#fff" }}>Secretaria de Juventude de Guarulhos</strong> — para jovens de 15 a 29 anos das periferias.{" "}
               <strong style={{ color: "#fff", fontWeight: 700 }}>Totalmente gratuito.</strong>
             </motion.p>
 

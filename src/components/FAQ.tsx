@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "Quem pode se inscrever?",
-    answer: "Jovens com idades entre 15 e 25 anos moradores de Guarulhos, com prioridade para residentes das regiões periféricas do município. O programa é voltado especialmente para quem não tem condições de custear um cursinho particular.",
+    answer: "Jovens com idades entre 15 e 29 anos moradores de Guarulhos, com prioridade para residentes das regiões periféricas do município. O programa é voltado especialmente para quem não tem condições de custear um cursinho particular.",
   },
   {
     question: "Onde são as aulas presenciais?",

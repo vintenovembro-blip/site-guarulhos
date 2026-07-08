@@ -9,7 +9,7 @@ const diferenciais = [
   { icon: MapPin,        title: "2 Unidades CEU",             description: "Aulas presenciais aos sábados no CEU Bonsucesso e no CEU Continental — próximo de você.", iconBg: "#dbeafe", iconColor: "#2563eb", border: "#bfdbfe", bg: "#eff6ff" },
   { icon: Calendar,      title: "Aulas aos Sábados",          description: "Turmas pela manhã no CEU Bonsucesso (8h às 12h15) ou à tarde no CEU Continental (13h30 às 17h30).",     iconBg: "#fef9c3", iconColor: "#ca8a04", border: "#fde68a", bg: "#fefce8" },
   { icon: BookOpenCheck, title: "Metodologia CPOP/MEC",       description: "Conteúdo 100% alinhado às diretrizes dos cursinhos populares CPOP vinculados ao Ministério da Educação (Edital 04/2026).",     iconBg: "#dcfce7", iconColor: "#16a34a", border: "#bbf7d0", bg: "#f0fdf4" },
-  { icon: Users2,        title: "Jovens de 15 a 25 anos",     description: "Voltado para jovens moradores das periferias de Guarulhos que não têm como custear cursinhos particulares.",                     iconBg: "#ede9fe", iconColor: "#7c3aed", border: "#ddd6fe", bg: "#f5f3ff" },
+  { icon: Users2,        title: "Jovens de 15 a 29 anos",     description: "Voltado para jovens moradores das periferias de Guarulhos que não têm como custear cursinhos particulares.",                     iconBg: "#ede9fe", iconColor: "#7c3aed", border: "#ddd6fe", bg: "#f5f3ff" },
 ];
 
 const checkItems = [

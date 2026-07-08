@@ -46,7 +46,7 @@ export default function InscricaoForm() {
             </p>
 
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: ".75rem" }}>
-              {["200 vagas em cada CEU (Bonsucesso e Continental)", "Aulas aos sábados, com horário por unidade", "Metodologia CPOP alinhada ao MEC", "Para jovens de 15 a 25 anos de Guarulhos"].map((item, i) => (
+              {["200 vagas em cada CEU (Bonsucesso e Continental)", "Aulas aos sábados, com horário por unidade", "Metodologia CPOP alinhada ao MEC", "Para jovens de 15 a 29 anos de Guarulhos"].map((item, i) => (
                 <motion.li key={item} initial={{ opacity: 0, x: reduce ? 0 : -14 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: .1 * i + .3 }}
                   style={{ display: "flex", alignItems: "center", gap: ".75rem" }}>
                   <CheckCircle2 style={{ width: "1.15rem", height: "1.15rem", color: "#4ade80", flexShrink: 0 }} />
