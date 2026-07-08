@@ -372,6 +372,7 @@ export default function InscricaoWizard() {
                     <BookOpen style={iconStyle} />
                     <select id="f-serie" {...register("serie", { required: true })} style={errors.serie ? inputErrorStyle : selectStyle}>
                       <option value="">Selecione</option>
+                      <option value="9-ano">9° Ano</option>
                       <option value="1-medio">1° Médio</option>
                       <option value="2-medio">2° Médio</option>
                       <option value="3-medio">3° Médio</option>
@@ -388,7 +389,6 @@ export default function InscricaoWizard() {
                       <option value="">Selecione</option>
                       <option value="etec">ETEC</option>
                       <option value="enem">ENEM</option>
-                      <option value="ambos">ETEC + ENEM</option>
                     </select>
                   </div>
                   {errors.interesse && <FieldError message="Obrigatório" />}
